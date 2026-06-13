@@ -1,0 +1,50 @@
+@use "../../scss/color" as color;
+@use "../../scss/typography" as typography;
+@use "../../scss/breakpoint" as breakpoint;
+
+.accrdion{
+  .hide{
+    display: none !important;
+  }
+
+  &:nth-child(n + 2)::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(1rem * 2 / 16);
+    margin: 1.5rem 0;
+    background-color: color.$purple-100;
+  }
+
+  .questions{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr max-content;
+    gap: 1rem;
+  }
+
+  .questions__info{
+    color: color.$purple-950;
+    @include typography.text-preset-2;
+  }
+
+  .questions__button{
+    border: none;
+    background: transparent;
+  }
+
+  .questions__button__img{
+    width: 1.75rem;
+    height: 1.75rem;
+    object-fit: scale-down;
+  }
+
+  .answer{
+    margin: 1.5rem 0 0 0;
+  }
+
+  .answer__info{
+    color: color.$purple-600;
+    @include typography.text-preset-3;
+  }
+}

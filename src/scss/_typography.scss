@@ -1,0 +1,45 @@
+@use "./breakpoint" as breakpoint;
+
+@font-face{
+  src: url("/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-family: "WorkSans";
+  font-weight: 100 900;
+}
+
+body {
+  font-family: "WorkSans", system-ui, sans-serif;
+}
+
+@mixin text-preset-1{
+  font-weight: 700;
+  font-size: calc(1rem * 32 / 16);
+  letter-spacing: 0;
+
+  @media (min-width: breakpoint.$tablet){
+    font-size: calc(1rem * 56 / 16);
+    line-height: calc(1rem * 66 / 16);
+  }
+}
+
+@mixin text-preset-2{
+  font-weight: 600;
+  font-size: calc(1rem * 16 / 16);
+  letter-spacing: 0;
+
+  @media (min-width: breakpoint.$tablet){
+    font-size: calc(1rem * 18 / 16);
+    line-height: calc(1rem * 21 / 16);
+  }
+}
+
+@mixin text-preset-3{
+  font-weight: 400;
+  font-size: calc(1rem * 14 / 16);
+  letter-spacing: 0;
+  line-height: 1.5;
+
+  @media (min-width: breakpoint.$tablet){
+    font-size: calc(1rem * 16 / 16);
+    line-height: calc(1rem * 24 / 16);
+  }
+}
