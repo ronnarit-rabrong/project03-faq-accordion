@@ -6,11 +6,11 @@
 .main-site{
   display: grid;
   grid-template-columns: 1.5rem 1fr 1.5rem;
-  grid-template-rows: calc(1rem * 130 / 16) calc(1rem * 100 / 16) auto 1fr;
+  grid-template-rows: calc(1rem * 130 / 16) calc(1rem * 100 / 16) auto calc(1rem * 130 / 16);
   min-height: 100svh;
   background-color: color.$purple-100;
   @media (min-width: breakpoint.$tablet){
-    grid-template-rows: calc(1rem * 166 / 16) calc(1rem * 154 / 16) auto 1fr;
+    grid-template-rows: calc(1rem * 166 / 16) calc(1rem * 154 / 16) auto calc(1rem * 166 / 16);
   }
 
   >*{
